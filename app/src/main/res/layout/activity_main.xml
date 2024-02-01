@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F3F3">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        app:cardElevation="5dp"
+        app:cardCornerRadius="5dp"
+        app:cardBackgroundColor="#fff"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".MainActivity"
+            android:orientation="vertical"
+            android:layout_margin="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                >
+                <EditText
+                    android:id="@+id/edtPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="number"
+                    android:hint="PhoneNumber"
+                    android:textSize="14sp"
+                    />
+
+                <Button
+                    android:id="@+id/btnSendCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Send"
+                    android:layout_weight="1"
+                    android:textSize="14sp"
+                    />
+                <Button
+                    android:id="@+id/btnSendCodeNextStep"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="StepNext"
+                    android:layout_weight="1"
+                    android:textSize="14sp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                >
+                <EditText
+                    android:id="@+id/edtCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="number"
+                    android:hint="Code"
+                    android:textSize="14sp"
+                    />
+
+                <Button
+                    android:id="@+id/btnCheckCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LogIn"
+                    android:layout_weight="1"
+                    android:textSize="14sp"
+                    />
+
+            </LinearLayout>
+
+            <View
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:layout_width = "fill_parent"
+                android:layout_height="3dp"
+                android:background="#DCDCDC" />
+
+            <EditText
+                android:id="@+id/edtToken"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="AuthToken"
+                android:textSize="14sp"
+                />
+
+            <View
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:layout_width = "fill_parent"
+                android:layout_height="3dp"
+                android:background="#DCDCDC" />
+
+            <Button
+                android:id="@+id/btnGetMyProfile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="GetMyInfo"
+                android:textSize="14sp"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                >
+                <EditText
+                    android:id="@+id/edtSearchUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="search id"
+                    android:textSize="14sp"
+                    />
+
+                <Button
+                    android:id="@+id/btnSearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Search"
+                    android:layout_weight="1"
+                    android:textSize="14sp"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                >
+                <EditText
+                    android:id="@+id/edtTargetUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="target Username"
+                    android:textSize="14sp"
+                    />
+
+                <Button
+                    android:id="@+id/btnGetTargetUserInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="GetInfo"
+                    android:layout_weight="1"
+                    android:textSize="14sp"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                >
+
+                <EditText
+                    android:id="@+id/edtTargetUserId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:hint="UserId (AutoFill)"
+                    android:enabled="false"
+                    android:textSize="14sp"
+                    />
+                <EditText
+                    android:id="@+id/edtTargetAccessHash"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:hint="AccessHash (AutoFill)"
+                    android:enabled="false"
+                    android:textSize="14sp"
+                    />
+
+            </LinearLayout>
+            <Button
+                android:id="@+id/btnJoinChannel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="JoinChannel"
+                android:textSize="14sp"
+                />
+            <Button
+                android:id="@+id/btnGetFullChannel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="GetFullChannel"
+                android:textSize="14sp"
+                />
+            <Button
+                android:id="@+id/btnGetLastMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Get 5 newest message"
+                android:textSize="14sp"
+                />
+            <Button
+                android:id="@+id/btnSeenMessages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Seen messages"
+                android:textSize="14sp"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                >
+                <EditText
+                    android:id="@+id/edtTargetMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="message"
+                    android:textSize="14sp"
+                    />
+
+                <Button
+                    android:id="@+id/btnSendMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Send Message"
+                    android:layout_weight="1"
+                    android:textSize="14sp"
+                    />
+
+            </LinearLayout>
+            <Button
+                android:id="@+id/btnMyChats"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="My Chats"
+                android:textSize="14sp"
+                />
+            <Button
+                android:id="@+id/btnJoinGP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="join gp"
+                android:textSize="14sp"
+                />
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:id="@+id/imgProfile"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
